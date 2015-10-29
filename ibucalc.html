@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Canine Ibuprofen Toxicity Calculator</title>
+		
+		<link rel="stylesheet" type="text/css" href="toxcalc.css">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		
+	</head>
+	<body>
+
+	<h1 id="title">Canine Ibuprofen Toxicity Calculator</h1>
+		<div id="form">
+		
+		<form action="action_page.php" method="get">
+		
+		<span id="weight-text"> Patient weight:
+		 
+			<input id="weight" type="number" name="weight">
+			
+			<label class="custom-dropdown custom-dropdown--white">
+        		<select id="wtOptions" class="custom-dropdown__select custom-dropdown__select--white" name="wt-opt">
+					<option id="lbs" value="lbs">lbs</option>
+					<option id="kg" value="kg">Kg</option>
+				</select>
+			</label>
+		</span>
+		
+		<span id="dose-text">Amount of medication ingested:
+			<input id="mg" type="number" name="mg"> mg
+		</span>
+	
+		<div id="calc-cont"><input type="button" value="Calculate" id="calc" onclick="computeTox()"></div>
+		
+		<span id="doseText">Dose Received:<label id="dose"></label>  mg/kg</span>
+			
+		<span id="seText">Expected side-effects:<label id="sideEffects"></label></span>
+		
+		
+			
+		</form>
+		</div>
+		<div id="backMain">
+			<input type="button" value="Back to Main" id="calc" onclick="location.href='index.html';">
+		</div>
+		
+		<script language="javascript" type="text/javascript" src="ibucalc.js"></script>
+		
+		<script language="javascript" type="text/javascript"></script>
+		
+	</body>
+</html>

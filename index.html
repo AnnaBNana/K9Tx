@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Canine Toxicity Calculators</title>
+		
+		<link rel="stylesheet" type="text/css" href="toxcalc.css">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		
+	</head>
+	<body>
+
+		<h1 id="title">Canine Toxicity Calculators</h1>
+		
+		
+		<div id="formFront">
+		<p id="toxTitleMain"> pick your poison: </p>
+		<form action="../" method="get">
+		
+		<div id="drugSelect">
+		<div class="custom-dropdown custom-dropdown--white">
+        		<select id="drugOptions" class="custom-dropdown__select custom-dropdown__select--white" name="slctopt">
+        			<option id="bromethalin" value="bromethtox.html">bromethalin</option>
+					<option id="chocolate" value="choccalc.html">chocolate</option>
+					<option id="NSAIDs" value="ibucalc.html">NSAIDs</option>
+					<option id="xylitol" value="xyltox.html">xylitol</option>
+
+				</select>
+		</div>
+		</div>		
+				
+				<span id="submitDrug"><input type="button" value="Ready to Calculate" id="ready"  onclick="window.open(this.form.slctopt.options[this.form.slctopt.selectedIndex].value,'_top')"></span>
+				
+		
+
+		</form>
+		</div>
+				
+	    <script language="javascript" type="text/javascript" src="ibucalc.js"></script>
+		
+		<script language="javascript" type="text/javascript"></script>
+
+	</body>
+	</html>

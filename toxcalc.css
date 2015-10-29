@@ -1,0 +1,211 @@
+* {
+	font-family: , "Arial Black", Arial, sans-serif;
+}
+body {
+	background: #E0DFE0;
+}
+h1 {
+	color: #4A93B8;
+	padding: 20px;
+	text-align: center;
+}
+#form, #formFront {
+	
+	width: 450px;
+	background: linear-gradient(#52A3CC, #6BB28F);
+	border: #4A93B8 solid;
+	border-radius: none;
+	padding: 20px;
+	margin: auto;
+	color: #FFF;
+	font-size: 20px;
+}
+span {
+	display: block;
+	padding: 6px;
+}
+
+#drugSelect {
+	width: auto;
+	text-align: center;
+	margin: 35px 0 0 0px;
+}
+
+#toxTitleMain {
+	font-size: 26px
+	color: #FFF;
+	margin: 20px;
+	text-align: center;
+}
+
+#submitDrug {
+	width: auto;
+	text-align: center;
+}
+
+.select-menu {
+	outline: none;
+}
+
+input[type="number"] {
+    width: 75px;
+    border-radius: none;
+	margin: 0;
+	font-family: sans-serif;
+	font-size: 14px;
+	appearance: none;
+	box-shadow: none;
+	padding: 5px;
+	border: solid 3px #4A93B8;
+	transition: border 0.3s;
+	color: #4A93B8;
+}
+
+#weight {
+	width: 45px;
+}
+
+#percCocoa {
+	width: 45px;
+}
+
+input[type="number"]:focus {
+  border: solid 5px #4384A6;
+  outline: none;
+  
+}
+
+#calc-cont {
+	width: auto;
+	text-align: center;
+}
+
+#calc, #ready{
+  width: auto;
+  padding:10px;
+  color: #FFF;
+  background-color: #4A93B8;
+  text-decoration:none;
+  border: #4A93B8;
+  border-radius: none;
+  font-size: 16px;
+  text-align: center;
+  margin: 10px;
+  outline: none;
+  cursor: hand;
+}
+
+#ready {
+	margin-top: 40px;
+}
+
+#calc:hover, #ready:hover {
+    background-color: #52A3CC;
+}
+
+.custom-dropdown--small {
+    font-size: .7em;
+    outline: none;
+}
+
+.custom-dropdown__select{
+    font-size: inherit; /* inherit size from .custom-dropdown */
+    padding: .5em; /* add some space*/
+    margin: 0; /* remove default margins */
+    outline: none;
+}
+
+.custom-dropdown__select--white {
+    background-color: #fff;
+    color: #444;
+    outline: none;    
+}
+
+@supports (pointer-events: none) and
+      ((-webkit-appearance: none) or
+      (-moz-appearance: none) or
+      (appearance: none)) {
+
+    .custom-dropdown {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 14px;
+        outline: none;
+    }
+
+    .custom-dropdown__select {
+        padding-right: 35px; /* accommodate with the pseudo elements for the dropdown arrow */
+        border: 0;
+        border-radius: 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;  
+    }
+.custom-dropdown::before,
+    .custom-dropdown::after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+    }
+
+    .custom-dropdown::after { /*  Custom dropdown arrow */
+        content: "\25BC";
+        height: 20px;
+        width: 14px;
+        font-size: 10px;
+        line-height: 1;
+        right: 5px;
+        top: 50%; margin-top: -.5em;
+        outline: none;
+    }
+
+    .custom-dropdown::before { /*  Custom dropdown arrow cover */
+        width: 2em;
+        right: 0; top: 0; bottom: 0;
+        border-radius: 0;
+        outline: none;
+    }
+
+    .custom-dropdown__select[disabled] {
+        color: rgba(0,0,0,.3);
+    }
+ .custom-dropdown.custom-dropdown--disabled::after {
+        color: rgba(0,0,0,.1);
+    }
+
+    /* White dropdown style */
+    .custom-dropdown--white::before {
+        background-color: #fff;
+        border-left: 1px solid rgba(0,0,0,.1);
+    }
+
+    .custom-dropdown--white::after {
+        color: rgba(0,0,0,.9);
+    }
+
+    /* FF only temp fix */
+    @-moz-document url-prefix() {
+        .custom-dropdown__select             { padding-right: 35px }
+        .custom-dropdown--small .custom-dropdown__select { padding-right: .5em }
+    }
+}
+
+#result {
+	padding-top: 20px;
+}
+
+#chocSelect {
+	margin: 20px 0 0 0;
+}
+
+#OR {
+	font-size: 26px;
+	text-align: center;
+}
+#backMain {
+	width: auto;
+	text-align: center;
+	margin-top: 35px;
+	
+}
