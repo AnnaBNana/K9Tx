@@ -1,10 +1,11 @@
 * {
-	font-family: , "Arial Black", Arial, sans-serif;
+	font-family: Arial, sans-serif;
 }
 body {
 	background: #E0DFE0;
 }
 h1 {
+  font-family: "Arial Black", Arial, sans-serif;
 	color: #4A93B8;
 	padding: 20px;
 	text-align: center;
@@ -14,7 +15,6 @@ h1 {
 	width: 450px;
 	background: linear-gradient(#52A3CC, #6BB28F);
 	border: #4A93B8 solid;
-	border-radius: none;
 	padding: 20px;
 	margin: auto;
 	color: #FFF;
