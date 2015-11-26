@@ -1,11 +1,11 @@
 * {
-	font-family: Arial, sans-serif;
+	font-family: 'Merriweather', sans-serif;
 }
 body {
 	background: #E0DFE0;
 }
 h1 {
-  font-family: "Arial Black", Arial, sans-serif;
+  font-family: 'Poppins', Arial, sans-serif;
 	color: #4A93B8;
 	padding: 20px;
 	text-align: center;
@@ -51,7 +51,7 @@ input[type="number"] {
     width: 75px;
     border-radius: none;
 	margin: 0;
-	font-family: sans-serif;
+	font-family: 'Merriweather', serif;
 	font-size: 14px;
 	appearance: none;
 	box-shadow: none;
