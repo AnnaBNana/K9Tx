@@ -28,46 +28,39 @@ function computeChoc()
         
         var chocOptions = document.getElementById("chocOptions").value;
         
-        var percCocoa = Number(document.getElementById("percCocoa").value);
-        
-        var percent = document.getElementById("percCocoa").value;
+        var percent = Number(document.getElementById("percCocoa").value);
+
 
 		//Error handling
-		if (weight < 0 || amt < 0) {
-       		document.getElementById("dose").textContent = "  " + "Invalid input";
-       		document.getElementById("sideEffects").textContent = "  " + "Please enter a valid weight and mg amount";
-       };
-       
-       if (weight < 0 || amt < 0) return;
-       
-       
-       if (isNaN(weight)) {
-       		document.getElementById("dose").textContent = "  " + "Invalid input";
-       		document.getElementById("sideEffects").textContent = "  " + "Please enter a valid weight and mg amount";
-	   };
-	   
-	   if (isNaN(weight)) {
-       		return;
-	   };
-	   
-	   
-	   if (isNaN(amt)) {
-       		document.getElementById("dose").textContent = "  " + "Invalid input";
-			document.getElementById("sideEffects").textContent = "  " + "Please enter a valid weight and mg amount";
-	   };
-	   
-	   if (isNaN(amt)) {
-       		return;
-	   };
+        if (weight < 0 || amt < 0) {
+          document.getElementById("dose").textContent = "  " + "Invalid input";
+          document.getElementById("sideEffects").textContent = "  " + "Please enter a valid weight and mg amount";
+          return;
+        };
 
-		if (chocOptions === "blnk" && document.getElementById('type').checked) {
-       		document.getElementById("dose").textContent = "  " + "Invalid input";
-       		document.getElementById("sideEffects").textContent = "  " + "Please select type of chocolate";
-       };
+        if (isNaN(weight)) {
+          document.getElementById("dose").textContent = "  " + "Invalid input";
+          document.getElementById("sideEffects").textContent = "  " + "Please enter a valid weight and mg amount";
+          return;
+        };
 
-		if (chocOptions === "blnk" && document.getElementById('type').checked) {
-			return;
-		}
+        if (isNaN(amt)) {
+          document.getElementById("dose").textContent = "  " + "Invalid input";
+          document.getElementById("sideEffects").textContent = "  " + "Please enter a valid weight and mg amount";
+          return;
+        };
+
+        if (percent <= 0 && document.getElementById('percent').checked) {
+          document.getElementById("dose").textContent = "  " + "Invalid input";
+          document.getElementById("sideEffects").textContent = "  " + "Please enter percent dark chocolate";
+          return;
+        };
+
+        if (chocOptions === "blnk" && document.getElementById('type').checked) {
+          document.getElementById("dose").textContent = "  " + "Invalid input";
+          document.getElementById("sideEffects").textContent = "  " + "Please select type of chocolate";
+          return;
+        };
 
         //Convert all units to metric
         if (wtOptions=="lbs") {
@@ -109,7 +102,7 @@ function computeChoc()
         }
         else {
           document.getElementById("dose").textContent = "  " + "Invalid input";
-          document.getElementById("sideEffects").textContent = "  " + "Please enter a valid weight and mg amount";
+          document.getElementById("sideEffects").textContent = "  " + "Please enter percent dark chocolate";
         };
       
         console.log(amt);
