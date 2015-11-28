@@ -81,28 +81,30 @@ function computeChoc()
         console.log(amt);
 
         //calculation for type of chocolate
-        if (chocOptions=="cocoPow") {
-         amt*=28.5;
-        }
-        
-        else if (chocOptions=="bakeChoc") {
-         amt*=16;
-        }
-        
-        else if (chocOptions=="semSweet") {
-         amt*=5.7;
-        }
-        
-        else if (chocOptions=="dkChoc") {
-         amt*=5.7;
-        }
-        
-        else if (chocOptions=="mlkChoc") {
-         amt*=2.3;
+        if (document.getElementById('type').checked) {
+          if (chocOptions=="cocoPow") {
+           amt*=28.5;
+          }
+          
+          else if (chocOptions=="bakeChoc") {
+           amt*=16;
+          }
+          
+          else if (chocOptions=="semSweet") {
+           amt*=5.7;
+          }
+          
+          else if (chocOptions=="dkChoc") {
+           amt*=5.7;
+          }
+          
+          else if (chocOptions=="mlkChoc") {
+           amt*=2.3;
+          };
         };
         
         //calculation for percentage dark cocoa
-        if (percent > 0) {
+        if (percent > 0 && document.getElementById('percent').checked)  {
           amt = amt*10.4*(percent/100);
         }
         else {
@@ -121,7 +123,7 @@ function computeChoc()
          console.log(toxCalc);
         
         //displays equation results
-        document.getElementById("dose").textContent= " " + Math.round(toxCalc);
+        document.getElementById("dose").textContent= " " + dose;
 
       //outcome log
       if (dose >0 && dose<=19) {
