@@ -11,8 +11,10 @@
 	<body>
 
 	<h1 id="title">Canine Methylxanthines Toxicity Calculator</h1>
+		
 		<div id="form">
-		<form action="action_page.php" method="get">
+
+		<form>
 		
 		<span id="weight-text"> Patient weight:
 		 
@@ -36,6 +38,14 @@
 			</select>
 			</label>
 		</span>
+
+		<span id="type_or_perc">
+			<div id="radio_opt">
+			Choose type of chocolate: <input type="radio" name="choctype" value="type" id="type" onclick="javascript:typeCheck();" checked>
+			<p> OR </p>
+			Enter percent dark chocolate: <input type="radio" name="choctype" value="percent" id="percent" onclick="javascript:percCheck();">
+			</div>
+		</span>
 	
 		<span id="choctype-text">Type of chocolate ingested:
 			<div id="chocSelect" class="custom-dropdown custom-dropdown--white">
@@ -50,9 +60,7 @@
 			</div>
 		</span>
 		
-		<span><p id="OR">- OR -</p></span>
-		
-		<span id="percDkChoc">Percent Cocoa Dark Chocolate:
+		<span id="percDkChoc" style="display:none">Percent Cocoa Dark Chocolate:
 			<input id="percCocoa" type="number" name="percCocoa"> %
 		</span>
 		

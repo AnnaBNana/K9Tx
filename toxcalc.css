@@ -18,7 +18,7 @@ h1 {
 	padding: 20px;
 	margin: auto;
 	color: #FFF;
-	font-size: 20px;
+	font-size: 16px;
 }
 span {
 	display: block;
@@ -78,6 +78,7 @@ input[type="number"]:focus {
 #calc-cont {
 	width: auto;
 	text-align: center;
+  margin: 20px;
 }
 
 #calc, #ready{
@@ -199,13 +200,21 @@ input[type="number"]:focus {
 	margin: 20px 0 0 0;
 }
 
-#OR {
-	font-size: 26px;
-	text-align: center;
-}
 #backMain {
 	width: auto;
 	text-align: center;
 	margin-top: 35px;
 	
+}
+#choctype-text {
+  margin: 0;
+  padding: 0;
+}
+#radio_opt {
+  text-align: center;
+  margin: 20px;
+  font-size: 18px;
+}
+#radio_opt p {
+  font-weight: bold;
 }
