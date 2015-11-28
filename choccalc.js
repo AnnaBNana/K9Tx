@@ -1,4 +1,19 @@
 
+  function percCheck() {
+      if (document.getElementById('percent').checked) {
+      document.getElementById('percDkChoc').style.display = 'block';
+      document.getElementById('choctype-text').style.display = 'none';
+      } 
+      else document.getElementById('choctype-text').style.display = 'none';
+  };
+
+  function typeCheck() {
+      if (document.getElementById('type').checked) {
+      document.getElementById('choctype-text').style.display = 'block';
+      document.getElementById('percDkChoc').style.display = 'none';
+      } 
+      else document.getElementById('percDkChoc').style.display = 'none';
+  };
 
 function computeChoc()
     {
@@ -15,6 +30,7 @@ function computeChoc()
         
         var percCocoa = Number(document.getElementById("percCocoa").value);
         
+        var percent = document.getElementById("percCocoa").value;
 
 		//Error handling
 		if (weight < 0 || amt < 0) {
@@ -44,12 +60,12 @@ function computeChoc()
        		return;
 	   };
 
-		if (chocOptions === "blnk") {
+		if (chocOptions === "blnk" && document.getElementById('type').checked) {
        		document.getElementById("dose").textContent = "  " + "Invalid input";
        		document.getElementById("sideEffects").textContent = "  " + "Please select type of chocolate";
        };
 
-		if (chocOptions === "blnk") {
+		if (chocOptions === "blnk" && document.getElementById('type').checked) {
 			return;
 		}
 
@@ -63,8 +79,7 @@ function computeChoc()
         };
         
         console.log(amt);
-        
-        
+
         //calculation for type of chocolate
         if (chocOptions=="cocoPow") {
          amt*=28.5;
@@ -86,7 +101,14 @@ function computeChoc()
          amt*=2.3;
         };
         
-        
+        //calculation for percentage dark cocoa
+        if (percent > 0) {
+          amt = amt*10.4*(percent/100);
+        }
+        else {
+          document.getElementById("dose").textContent = "  " + "Invalid input";
+          document.getElementById("sideEffects").textContent = "  " + "Please enter a valid weight and mg amount";
+        };
       
         console.log(amt);
         
@@ -120,3 +142,5 @@ function computeChoc()
       
       
   };
+
+
