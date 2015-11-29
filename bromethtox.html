@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Canine Toxicity Calculators</title>
+		<title>Canine Bromethalin Toxicity Calculator</title>
 		
 		<link rel="stylesheet" type="text/css" href="toxcalc.css">
 		<link href='https://fonts.googleapis.com/css?family=Merriweather:300,900|Poppins:700' rel='stylesheet' type='text/css'>
@@ -14,23 +14,53 @@
 		<h1 id="title">Canine Bromethalin Toxicity Calculator</h1>
 		
 		
-		<div id="formFront">
-		<p id="toxTitleMain">Coming Soon!</p>
-		<form action="../" method="get">
+		<form id="formFront">
 		
+			<div id="weight-text"> Patient weight:
+		 
+			<input id="weight" type="number" name="weight">
+			
+			<label class="custom-dropdown custom-dropdown--white">
+        		<select id="wtOptions" class="custom-dropdown__select custom-dropdown__select--white" name="wt-opt">
+					<option id="lbs" value="lbs">lbs</option>
+					<option id="kg" value="kg">Kg</option>
+				</select>
+			</label>
+
+			</div>
+		
+			<div id="dose-text"><p>Amount of bromethalin ingested:<p>
 				
+				<input id="amt" type="number" name="amt">
+				<label class="custom-dropdown custom-dropdown--white">
+				<select id="amtOptions" class="custom-dropdown__select custom-dropdown__select--white" name="chocWtOptions">
+						<option id="oz-bait1" value="oz1">0.01% by oz</option>
+						<option id="g-bait1" value="g1">0.01% by gram</option>
+						<option id="oz-bait2" value="oz2">0.025% by oz</option>
+						<option id="g-bait2" value="g2">0.025% by gram</option>
+						<option id="mg" value="mg">mg pure bromethalin</option>
+				</select>
+				</label>
+			</div>
+		
+			<div id="calc-cont"><input type="button" value="Calculate" id="calc" onclick="computeChoc()"></div>
+			
+			
+			<div id="doseText">Dose Received:<label id="dose"></label>  mg/kg</div>
+				
+			<div id="seText">Prognosis:<label id="sideEffects"></label></div>
+			
 		
 
 		</form>
-		</div>
 		
 		<div id="backMain">
 			<input type="button" value="Back to Main" id="calc" onclick="location.href='index.html';">
 		</div>
 				
-	    <script language="javascript" type="text/javascript" src="ibucalc.js"></script>
+	    <script type="text/javascript" src="bromtox.js"></script>
 		
-		<script language="javascript" type="text/javascript"></script>
+		<script type="text/javascript"></script>
 
 	</body>
 	</html>

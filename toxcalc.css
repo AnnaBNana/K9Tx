@@ -11,7 +11,6 @@ h1 {
 	text-align: center;
 }
 #form, #formFront {
-	
 	width: 450px;
 	background: linear-gradient(#52A3CC, #6BB28F);
 	border: #4A93B8 solid;
@@ -24,29 +23,30 @@ span {
 	display: block;
 	padding: 6px;
 }
-
 #drugSelect {
 	width: auto;
 	text-align: center;
 	margin: 35px 0 0 0px;
 }
-
 #toxTitleMain {
 	font-size: 26px
 	color: #FFF;
 	margin: 20px;
 	text-align: center;
 }
-
+#weight-text {
+  padding: 20px 0;
+}
+#dose-text {
+  padding: 10px 0;
+}
 #submitDrug {
 	width: auto;
 	text-align: center;
 }
-
 .select-menu {
 	outline: none;
 }
-
 input[type="number"] {
     width: 75px;
     border-radius: none;
@@ -68,7 +68,12 @@ input[type="number"] {
 #percCocoa {
 	width: 45px;
 }
-
+#doseText, #seText {
+  padding: 10px;
+}
+#doseText p {
+  padding-bottom: 6px;
+}
 input[type="number"]:focus {
   border: solid 5px #4384A6;
   outline: none;
@@ -81,7 +86,7 @@ input[type="number"]:focus {
   margin: 20px;
 }
 
-#calc, #ready{
+#calc, #ready, #back {
   width: auto;
   padding:10px;
   color: #FFF;
@@ -100,7 +105,7 @@ input[type="number"]:focus {
 	margin-top: 40px;
 }
 
-#calc:hover, #ready:hover {
+#calc:hover, #ready:hover, #back:hover {
     background-color: #52A3CC;
 }
 
